@@ -1,0 +1,865 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Georgia', serif;
+	line-height: 1.6;
+	color: #333;
+	background: #fafafa;
+}
+
+.catalog-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background: white;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Cover Page */
+.cover {
+	height: 100vh;
+	background:
+		linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%),
+		url('../image/cover-background.png') center/cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.cover::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+}
+
+.cover-content {
+	z-index: 1;
+	animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.exhibition-title {
+	font-size: 4rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.exhibition-subtitle {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	font-style: italic;
+	opacity: 0.9;
+}
+
+.exhibition-details {
+	font-size: 1.2rem;
+	margin-bottom: 3rem;
+}
+
+/* Navigation */
+.nav {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 10px;
+	border-radius: 25px;
+	backdrop-filter: blur(10px);
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	margin: 0 15px;
+	transition: color 0.3s;
+}
+
+.nav a:hover {
+	color: #667eea;
+}
+
+/* Language Toggle */
+.language-toggle {
+	display: flex;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	padding: 2px;
+	gap: 2px;
+}
+
+.lang-btn {
+	background: transparent;
+	border: none;
+	color: white;
+	padding: 6px 12px;
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	min-width: 40px;
+}
+
+.lang-btn:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+	background: #667eea;
+	color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styling */
+.section {
+	min-height: 100vh;
+	padding: 80px 40px;
+}
+
+/* Introduction Section with gradient */
+#intro.section {
+	background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.15) 50%, rgba(255, 255, 255, 1) 80%);
+}
+
+.section-title {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 3rem;
+	color: #333;
+	position: relative;
+}
+
+.section-title::after {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 3px;
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	margin: 20px auto;
+}
+
+/* Introduction */
+.intro-content {
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 1.2rem;
+	line-height: 2;
+	text-align: justify;
+}
+
+/* Collective Section */
+.collective-section {
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.collective-content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.collective-intro {
+	text-align: center;
+	margin-bottom: 50px;
+	font-size: 1.3rem;
+	line-height: 1.8;
+	color: #333;
+}
+
+.quote-attribution {
+	margin-top: 20px;
+	color: #667eea;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1rem;
+}
+
+/* Artist Grid */
+.artists-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 40px;
+	margin-top: 40px;
+}
+
+.artist-card {
+	background: white;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.artist-photo {
+	width: 100%;
+	height: 300px;
+	background: #ddd;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.artist-info {
+	padding: 30px;
+}
+
+.artist-name {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.artist-bio {
+	font-size: 1rem;
+	line-height: 1.8;
+	color: #555;
+	margin-bottom: 20px;
+}
+
+.artist-statement {
+	font-style: italic;
+	color: #555;
+	border-left: 3px solid #667eea;
+	padding-left: 15px;
+}
+
+/* Search and Filter */
+.search-filter-container {
+	max-width: 1000px;
+	margin: 0 auto 40px auto;
+	text-align: center;
+}
+
+.search-box {
+	position: relative;
+	max-width: 400px;
+	margin: 0 auto 30px auto;
+}
+
+.search-box input {
+	width: 100%;
+	padding: 15px 50px 15px 20px;
+	border: 2px solid #e0e0e0;
+	border-radius: 25px;
+	font-size: 1rem;
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+	border-color: #667eea;
+}
+
+.search-box button {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	font-size: 1.2rem;
+	color: #aaa;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.search-box button:hover {
+	color: #333;
+}
+
+.filter-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+.filter-btn {
+	padding: 10px 20px;
+	background: #f8f9fa;
+	border: 2px solid #e0e0e0;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+	white-space: nowrap;
+}
+
+.filter-btn:hover {
+	background: #667eea;
+	color: white;
+	border-color: #667eea;
+}
+
+.filter-btn.active {
+	background: #667eea;
+	color: white;
+	border-color: #667eea;
+}
+
+/* Artist Sections */
+.artist-section {
+	margin-bottom: 80px;
+	padding: 0 20px;
+}
+
+.artist-section-title {
+	font-size: 2.2rem;
+	color: #333;
+	margin-bottom: 30px;
+	text-align: left;
+	font-weight: bold;
+	position: relative;
+	padding-left: 20px;
+}
+
+.artist-section-title::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 6px;
+	height: 40px;
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	border-radius: 3px;
+}
+
+.artist-artwork-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+}
+
+.artist-artwork-grid.large-collection {
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 25px;
+}
+
+/* Legacy artwork grid for backwards compatibility */
+.artwork-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+
+.artwork-item {
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.artwork-item:hover {
+	transform: scale(1.02);
+}
+
+.artwork-image {
+	width: 100%;
+	height: 250px;
+	background: #eee;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.artwork-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease;
+}
+
+.artwork-item:hover .artwork-image img {
+	transform: scale(1.05);
+}
+
+.artwork-details {
+	padding: 20px;
+}
+
+.artwork-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.artwork-artist {
+	color: #667eea;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.artwork-info {
+	font-size: 0.9rem;
+	color: #555;
+	line-height: 1.5;
+}
+
+/* Exhibition Info */
+.exhibition-info {
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	padding: 60px 40px;
+	text-align: center;
+}
+
+.info-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 40px;
+	max-width: 1000px;
+	margin: 40px auto 0;
+}
+
+.info-card {
+	background: white;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+	color: #667eea;
+}
+
+.info-title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.info-text {
+	color: #555;
+	line-height: 1.6;
+}
+
+/* Print Styles */
+@media print {
+	.nav {
+		display: none;
+	}
+
+	.section {
+		page-break-inside: avoid;
+		min-height: auto;
+	}
+
+	.artist-card,
+	.artwork-item {
+		page-break-inside: avoid;
+		margin-bottom: 20px;
+	}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.exhibition-title {
+		font-size: 2.5rem;
+		letter-spacing: 1px;
+	}
+
+	.exhibition-subtitle {
+		font-size: 1.2rem;
+	}
+
+	.exhibition-details {
+		font-size: 1rem;
+	}
+
+	.section {
+		padding: 40px 20px;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.intro-content {
+		font-size: 1.1rem;
+		padding: 0 10px;
+	}
+
+	.collective-intro {
+		font-size: 1.1rem;
+		padding: 0 10px;
+	}
+
+	.nav {
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		padding: 8px;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.nav-links {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.nav a {
+		margin: 0 8px;
+		font-size: 0.9rem;
+	}
+
+	.language-toggle {
+		align-self: center;
+	}
+
+	.lang-btn {
+		padding: 4px 8px;
+		font-size: 0.8rem;
+	}
+
+	.artists-grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.artist-section {
+		margin-bottom: 60px;
+		padding: 0 10px;
+	}
+
+	.artist-section-title {
+		font-size: 1.8rem;
+		margin-bottom: 20px;
+		padding-left: 15px;
+	}
+
+	.artist-section-title::before {
+		width: 4px;
+		height: 30px;
+	}
+
+	.artist-artwork-grid,
+	.artist-artwork-grid.large-collection {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 20px;
+	}
+
+	.artwork-grid {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 20px;
+	}
+
+	.filter-buttons {
+		gap: 8px;
+	}
+
+	.filter-btn {
+		padding: 8px 12px;
+		font-size: 0.8rem;
+	}
+
+	.search-box input {
+		padding: 12px 40px 12px 15px;
+		font-size: 0.9rem;
+	}
+
+	.lightbox-content {
+		margin: 2% auto;
+		width: 95%;
+	}
+
+	.lightbox-image img {
+		max-height: 40vh;
+	}
+
+	.lightbox-info {
+		padding: 20px;
+	}
+
+	.lightbox-info h3 {
+		font-size: 1.5rem;
+	}
+
+	.lightbox-info p {
+		font-size: 1rem;
+	}
+
+	.info-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.artist-name {
+		font-size: 1.5rem;
+	}
+
+	.artist-bio {
+		font-size: 0.95rem;
+	}
+
+	.artist-statement {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.exhibition-title {
+		font-size: 2rem;
+	}
+
+	.exhibition-subtitle {
+		font-size: 1rem;
+	}
+
+	.section-title {
+		font-size: 1.8rem;
+	}
+
+	.artist-section {
+		margin-bottom: 50px;
+		padding: 0 5px;
+	}
+
+	.artist-section-title {
+		font-size: 1.6rem;
+		margin-bottom: 15px;
+		padding-left: 10px;
+	}
+
+	.artist-section-title::before {
+		width: 3px;
+		height: 25px;
+	}
+
+	.artist-artwork-grid,
+	.artist-artwork-grid.large-collection,
+	.artwork-grid {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+
+	.filter-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.filter-btn {
+		width: 200px;
+		text-align: center;
+	}
+
+	.nav a {
+		margin: 0 5px;
+		font-size: 0.8rem;
+	}
+}
+
+/* Smooth Scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	border-radius: 5px;
+}
+
+/* Lightbox Modal */
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+	position: relative;
+	margin: 5% auto;
+	width: 90%;
+	max-width: 800px;
+	background: white;
+	border-radius: 15px;
+	overflow: hidden;
+	animation: slideIn 0.3s ease;
+}
+
+.close {
+	position: absolute;
+	top: 15px;
+	right: 25px;
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	z-index: 10000;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.9);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.close:hover {
+	background: rgba(255, 255, 255, 1);
+	color: #333;
+}
+
+.lightbox-image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f8f8f8;
+}
+
+.lightbox-image img {
+	max-width: 100%;
+	max-height: 50vh;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+.lightbox-info {
+	padding: 30px;
+	text-align: center;
+}
+
+.lightbox-info h3 {
+	font-size: 2rem;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.lightbox-info p {
+	color: #555;
+	margin: 10px 0;
+	font-size: 1.1rem;
+}
+
+/* Share Buttons */
+.share-buttons {
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.share-buttons h4 {
+	margin-bottom: 15px;
+	color: #333;
+	font-size: 1rem;
+}
+
+.share-btn {
+	display: inline-block;
+	padding: 8px 15px;
+	margin: 5px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	color: white;
+}
+
+.share-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn.facebook {
+	background: #1877f2;
+}
+
+.share-btn.twitter {
+	background: #1da1f2;
+}
+
+.share-btn.whatsapp {
+	background: #25d366;
+}
+
+.share-btn.copy {
+	background: #6c757d;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Add cursor pointer to artwork items */
+.artwork-item {
+	cursor: pointer;
+}
