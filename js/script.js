@@ -326,6 +326,7 @@ const translations = {
         'nav-visit': 'Visitação',
 
         // Cover
+        'collective-presentation': 'Coletivo Planeta Hostil apresenta:',
         'cover-subtitle': 'Venha descobrir como materiais descartados se transformam em multiversas artísticas',
         'cover-details1': '8 Artistas • Obras Contemporâneas • Técnicas Mistas',
         'cover-details2': 'Passagem Literária • São Paulo',
@@ -411,6 +412,7 @@ const translations = {
         'nav-visit': 'Visit',
 
         // Cover
+        'collective-presentation': 'Planeta Hostil Collective presents:',
         'cover-subtitle': 'Discover how discarded materials transform into artistic multiverses',
         'cover-details1': '8 Artists • Contemporary Works • Mixed Techniques',
         'cover-details2': 'Passagem Literária • São Paulo',
