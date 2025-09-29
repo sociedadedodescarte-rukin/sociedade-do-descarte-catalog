@@ -363,7 +363,7 @@ const translations = {
         'info-admission-title': 'Entrada',
         'info-admission-text': 'Geral: Gratuita<br>Acessibilidade: Possui escadas',
         'info-contact-title': 'Contato',
-        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial<br>Preços sob consulta',
+        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial',
 
         // Share buttons
         'share-title': 'Compartilhar:',
@@ -449,7 +449,7 @@ const translations = {
         'info-admission-title': 'Admission',
         'info-admission-text': 'General: Free<br>Accessibility: Has stairs',
         'info-contact-title': 'Contact',
-        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial<br>Prices upon request',
+        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial',
 
         // Share buttons
         'share-title': 'Share:',
