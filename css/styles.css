@@ -49,6 +49,14 @@ body {
 	animation: fadeInUp 1.5s ease-out;
 }
 
+.collective-presentation {
+	font-size: 1.4rem;
+	font-style: italic;
+	margin-bottom: 1rem;
+	opacity: 0.9;
+	font-weight: 300;
+}
+
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -499,6 +507,11 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+	.collective-presentation {
+		font-size: 1.1rem;
+		margin-bottom: 0.8rem;
+	}
+
 	.exhibition-title {
 		font-size: 2.5rem;
 		letter-spacing: 1px;
@@ -645,6 +658,11 @@ body {
 }
 
 @media (max-width: 480px) {
+	.collective-presentation {
+		font-size: 1rem;
+		margin-bottom: 0.6rem;
+	}
+
 	.exhibition-title {
 		font-size: 2rem;
 	}
