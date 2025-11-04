@@ -234,7 +234,7 @@ function openLightbox(imageId, title, artist, technique, year) {
     }
 
     lightboxTitle.textContent = title;
-    lightboxArtist.textContent = currentLanguage === 'pt' ? `Por ${artist}` : `By ${artist}`;
+    lightboxArtist.textContent = currentLanguage === 'pt' ? `by ${artist}` : `By ${artist}`;
     lightboxDetails.textContent = currentLanguage === 'pt' ?
         `${technique} • Preços sob consulta` :
         `${technique} • Price upon request`;
@@ -327,10 +327,11 @@ const translations = {
 
         // Cover
         'cover-presents': 'Coletivo Planeta Hostil apresenta:',
-        'cover-subtitle': 'Venha descobrir como materiais descartados se transformam em multiversas artísticas',
+        'cover-title': 'SOCIEDADE DO DESCARTE',
+        'cover-subtitle': 'Venha descobrir como materiais descartados se transformam em multiversos artísticos',
         'cover-details1': '8 Artistas • Obras Contemporâneas • Técnicas Mistas',
         'cover-details2': 'Passagem Literária • São Paulo',
-        'cover-details3': '13 Set a 15 Nov • 2025',
+        'cover-details3': 'Setembro à Dezembro • 2025',
 
         // Introduction
         'intro-title': 'Sobre a Exposição',
@@ -359,11 +360,11 @@ const translations = {
         'info-location-title': 'Localização',
         'info-location-text': 'Passagem Literária<br>R. da Consolação x Av. Paulista<br>São Paulo, SP',
         'info-hours-title': 'Horários',
-        'info-hours-text': 'Segunda a Sábado<br>11:00 às 18:30',
+        'info-hours-text': 'Segunda a Sábado<br>11:00 às 18:30<br> Exposição até Dez 2025',
         'info-admission-title': 'Entrada',
         'info-admission-text': 'Geral: Gratuita<br>Acessibilidade: Possui escadas',
         'info-contact-title': 'Contato',
-        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial',
+        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial ; @rukin563',
 
         // Share buttons
         'share-title': 'Compartilhar:',
@@ -413,10 +414,11 @@ const translations = {
 
         // Cover
         'cover-presents': 'Planeta Hostil Collective presents:',
+        'cover-title': 'THROWAWAY SOCIETY',
         'cover-subtitle': 'Discover how discarded materials transform into artistic multiverses',
         'cover-details1': '8 Artists • Contemporary Works • Mixed Techniques',
         'cover-details2': 'Passagem Literária • São Paulo',
-        'cover-details3': 'Sep 13 to Nov 15 • 2025',
+        'cover-details3': 'September to December • 2025',
 
         // Introduction
         'intro-title': 'About the Exhibition',
@@ -445,11 +447,11 @@ const translations = {
         'info-location-title': 'Location',
         'info-location-text': 'Passagem Literária<br>R. da Consolação x Av. Paulista<br>São Paulo, SP',
         'info-hours-title': 'Hours',
-        'info-hours-text': 'Monday to Saturday<br>11:00 AM to 6:30 PM',
+        'info-hours-text': 'Monday to Saturday<br>11:00 AM to 6:30 PM<br> Exhibition until Dez 2025',
         'info-admission-title': 'Admission',
         'info-admission-text': 'General: Free<br>Accessibility: Has stairs',
         'info-contact-title': 'Contact',
-        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial',
+        'info-contact-text': 'Email: sociedadedodescarte@gmail.com<br>Instagram: @passagemliteraria_oficial ; @rukin563',
 
         // Share buttons
         'share-title': 'Share:',
