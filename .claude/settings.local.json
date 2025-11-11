@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "Bash(node:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(npm install:*)",
+      "Bash(npx cleancss:*)",
+      "Bash(npx terser:*)",
+      "Bash(.gitignore)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(./minify.sh:*)"
     ],
     "deny": [],
     "ask": []
