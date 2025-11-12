@@ -21,8 +21,7 @@ body {
 /* Cover Page */
 .cover {
 	height: 100vh;
-	background:
-		linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%),
+	background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%),
 		url('../image/cover-background.png') center/cover no-repeat;
 	display: flex;
 	flex-direction: column;
@@ -159,7 +158,12 @@ body {
 
 /* Introduction Section with gradient */
 #intro.section {
-	background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.15) 50%, rgba(255, 255, 255, 1) 80%);
+	background: linear-gradient(
+		135deg,
+		rgba(102, 126, 234, 0.25) 0%,
+		rgba(118, 75, 162, 0.15) 50%,
+		rgba(255, 255, 255, 1) 80%
+	);
 }
 
 .section-title {
@@ -644,6 +648,10 @@ body {
 		gap: 20px;
 	}
 
+	.exhibition-info {
+		padding: 40px 20px;
+	}
+
 	.artist-name {
 		font-size: 1.5rem;
 	}
@@ -862,8 +870,12 @@ html {
 }
 
 @keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes slideIn {

@@ -234,7 +234,7 @@ function openLightbox(imageId, title, artist, technique, year) {
     }
 
     lightboxTitle.textContent = title;
-    lightboxArtist.textContent = currentLanguage === 'pt' ? `by ${artist}` : `By ${artist}`;
+    lightboxArtist.textContent = currentLanguage === 'pt' ? `por ${artist}` : `by ${artist}`;
     lightboxDetails.textContent = currentLanguage === 'pt' ?
         `${technique} • Preços sob consulta` :
         `${technique} • Price upon request`;
@@ -312,6 +312,564 @@ function showCopyFeedback(message) {
     setTimeout(() => {
         document.body.removeChild(feedback);
     }, 2000);
+}
+
+// Artwork Data Structure (Bilingual)
+const artworksData = {
+    'Langa': [
+        {
+            id: 'langa1',
+            imageId: 'langa1',
+            imageSrc: 'image/Art_Langa01.jpg',
+            title: { pt: 'A flor', en: 'The Flower' },
+            year: '2025',
+            dimensions: '198 x 130 cm',
+            technique: {
+                pt: 'Bandeira de Patchwork',
+                en: 'Patchwork Banner'
+            },
+            altText: { pt: 'A Flor por Langa', en: 'The Flower by Langa' }
+        },
+        {
+            id: 'langa2',
+            imageId: 'langa2',
+            imageSrc: 'image/Art_Langa02.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '33 cm (diâmetro)',
+            technique: {
+                pt: 'Escultura de Papietagem',
+                en: 'papier-mâché sculpture'
+            },
+            altText: { pt: 'Sem Título por Langa', en: 'Untitled by Langa' }
+        },
+        {
+            id: 'langa3',
+            imageId: 'langa3',
+            imageSrc: 'image/Art_Langa03.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '51 cm (diâmetro)',
+            technique: {
+                pt: 'Escultura de Papietagem',
+                en: 'papier-mâché sculpture'
+            },
+            altText: { pt: 'Sem Título por Langa', en: 'Untitled by Langa' }
+        }
+    ],
+    'Iskor': [
+        {
+            id: 'iskor1',
+            imageId: 'iskor1',
+            imageSrc: 'image/Art_Iskor01.jpg',
+            title: { pt: 'Fast Fashion', en: 'Fast Fashion' },
+            year: '2025',
+            dimensions: '160 x 300 cm',
+            technique: {
+                pt: 'Tinta acrílica, spray e retalhos de tecido sobre tela',
+                en: 'Acrylic paint and spray paint plus fabric scraps on canvas'
+            },
+            altText: { pt: 'Fast Fashion por Iskor', en: 'Fast Fashion by Iskor' }
+        }
+    ],
+    'Milly Pannunzio': [
+        {
+            id: 'milly1',
+            imageId: 'milly1',
+            imageSrc: 'image/Art_Milly01.jpg',
+            title: { pt: 'Cipós Urbanos', en: 'Urban Vines' },
+            year: '2021',
+            dimensions: '1,90 x 0,14 m (cada peça) total 8 peças',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Cipós Urbanos por Milly Pannunzio', en: 'Urban Vines by Milly Pannunzio' },
+            note: { pt: '*Obra pode ser dividida em até 8 partes mediante interesse', en: '* The work can be divided into up to 8 parts depending on interest' }
+        }
+    ],
+    'Rukin563': [
+        {
+            id: 'rukin1',
+            imageId: 'rukin1',
+            imageSrc: 'image/Art_Rukin01.jpg',
+            title: { pt: 'Forever I', en: 'Forever I' },
+            year: '2025',
+            dimensions: '58 x 36,5 x 3,8 cm',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Forever I por Rukin563', en: 'Forever I by Rukin563' }
+        },
+        {
+            id: 'rukin2',
+            imageId: 'rukin2',
+            imageSrc: 'image/Art_Rukin02.jpg',
+            title: { pt: 'Forever II', en: 'Forever II' },
+            year: '2025',
+            dimensions: '58 x 36,5 x 3,8 cm',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Forever II por Rukin563', en: 'Forever II by Rukin563' }
+        },
+        {
+            id: 'rukin3',
+            imageId: 'rukin3',
+            imageSrc: 'image/Art_Rukin03.jpg',
+            title: { pt: 'Forever III', en: 'Forever - III' },
+            year: '2025',
+            dimensions: '58 x 36,5 x 3,8 cm',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Forever III por Rukin563', en: 'Forever III by Rukin563' }
+        },
+        {
+            id: 'rukin4',
+            imageId: 'rukin4',
+            imageSrc: 'image/Art_Rukin04.jpg',
+            title: { pt: 'Time Capsule', en: 'Time Capsule' },
+            year: '2025',
+            dimensions: '45 x 35 x 3,9 cm',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Time Capsule por Rukin563', en: 'Time Capsule by Rukin563' }
+        },
+        {
+            id: 'rukin5',
+            imageId: 'rukin5',
+            imageSrc: 'image/Art_Rukin05.jpg',
+            title: { pt: 'Máscara do Herói', en: 'Hero Mask' },
+            year: '2025',
+            dimensions: '',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Máscara Herói por Rukin563', en: 'Hero Mask by Rukin563' }
+        },
+        {
+            id: 'rukin6',
+            imageId: 'rukin6',
+            imageSrc: 'image/Art_Rukin06.jpg',
+            title: { pt: 'Máscara Vide Bula', en: 'Package Insert Mask' },
+            year: '2025',
+            dimensions: '',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Máscara Vide Bula por Rukin563', en: 'Package Insert Mask by Rukin563' }
+        },
+        {
+            id: 'rukin7',
+            imageId: 'rukin7',
+            imageSrc: 'image/Art_Rukin07.jpg',
+            title: { pt: 'New Wave', en: 'New Wave' },
+            year: '2025',
+            dimensions: '',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'New Wave por Rukin563', en: 'New Wave by Rukin563' }
+        },
+        {
+            id: 'rukin8',
+            imageId: 'rukin8',
+            imageSrc: 'image/Art_Rukin08.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Sem Título por Rukin563', en: 'Untitled by Rukin563' }
+        },
+        {
+            id: 'rukin9',
+            imageId: 'rukin9',
+            imageSrc: 'image/Art_Rukin09.jpg',
+            title: { pt: 'Linhas e Espelho', en: 'Lines and Mirror' },
+            year: '2025',
+            dimensions: '',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'Linhas e Espelho por Rukin563', en: 'Lines and Mirror by Rukin563' }
+        },
+        {
+            id: 'rukin10',
+            imageId: 'rukin10',
+            imageSrc: 'image/Art_Rukin10.jpg',
+            title: { pt: 'O Aroma Colorido dos Perfumes', en: 'The Colorful Aroma of the Perfumes' },
+            year: '2025',
+            dimensions: '',
+            technique: {
+                pt: 'Assemblagem com Materiais de Descarte',
+                en: 'Assemblage with Discarded Materials'
+            },
+            altText: { pt: 'O Aroma Colorido dos Perfumes por Rukin563', en: 'The Colorful Aroma of the Perfumes by Rukin563' }
+        }
+    ],
+    'Luis Guimarães': [
+        {
+            id: 'luis1',
+            imageId: 'luis1',
+            imageSrc: 'image/Art_luis01.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '46 x 28,5 x 12 cm',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        },
+        {
+            id: 'luis2',
+            imageId: 'luis2',
+            imageSrc: 'image/Art_luis02.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '80 x 25 x 14 cm',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        },
+        {
+            id: 'luis4',
+            imageId: 'luis4',
+            imageSrc: 'image/Art_luis04.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '160 x 72 x 26 cm',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        },
+        {
+            id: 'luis5',
+            imageId: 'luis5',
+            imageSrc: 'image/Art_luis05.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '74 x 28 x 19 cm',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        },
+        {
+            id: 'luis6',
+            imageId: 'luis6',
+            imageSrc: 'image/Art_luis06.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '51 x 48,5 x 19',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        },
+        {
+            id: 'luis7',
+            imageId: 'luis7',
+            imageSrc: 'image/Art_luis07.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '24 x 25 x 4 cm',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        },
+        {
+            id: 'luis8',
+            imageId: 'luis8',
+            imageSrc: 'image/Art_luis08.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '59 (diâmetro) x 6,5 cm',
+            technique: {
+                pt: 'Assemblagem',
+                en: 'Assemblage'
+            },
+            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
+        }
+    ],
+    'DDois': [
+        {
+            id: 'ddois1',
+            imageId: 'ddois1',
+            imageSrc: 'image/Art_Ddois01.jpg',
+            title: { pt: 'Sem Título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '75 x 148 x 27 cm',
+            technique: {
+                pt: 'Escultura de Isopor e tinta spray',
+                en: 'Styrofoam and Spray Painting'
+            },
+            altText: { pt: 'Título da Obra 1 por DDois', en: 'Untitled by DDois' }
+        },
+        {
+            id: 'ddois2',
+            imageId: 'ddois2',
+            imageSrc: 'image/Art_Ddois02.jpg',
+            title: { pt: 'Ananse Ntotan', en: 'Ananse Ntotan' },
+            year: '2025',
+            dimensions: '47 x 35,5 x 19,5 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 2 por DDois', en: 'Ananse Ntotan by DDois' }
+        },
+        {
+            id: 'ddois3',
+            imageId: 'ddois3',
+            imageSrc: 'image/Art_Ddois03.jpg',
+            title: { pt: 'Dwantire', en: 'Dwantire' },
+            year: '2025',
+            dimensions: '22 x 47 x 20 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 3 por DDois', en: 'Dwantire by DDois' }
+        },
+        {
+            id: 'ddois4',
+            imageId: 'ddois4',
+            imageSrc: 'image/Art_Ddois04.jpg',
+            title: { pt: 'Nsaa', en: 'Nsaa' },
+            year: '2025',
+            dimensions: '21,5 x 30 x 20 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 4 por DDois', en: 'Nsaa by DDois' }
+        },
+        {
+            id: 'ddois5',
+            imageId: 'ddois5',
+            imageSrc: 'image/Art_Ddois05.jpg',
+            title: { pt: 'Aya', en: 'Aya' },
+            year: '2025',
+            dimensions: '32 x 56 x 20 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 5 por DDois', en: 'Aya by DDois' }
+        },
+        {
+            id: 'ddois6',
+            imageId: 'ddois6',
+            imageSrc: 'image/Art_Ddois06.jpg',
+            title: { pt: 'Sankofa', en: 'Sankofa' },
+            year: '2025',
+            dimensions: '37 x 36 x 19,5 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 6 por DDois', en: 'Sankofa by DDois' }
+        },
+        {
+            id: 'ddois7',
+            imageId: 'ddois7',
+            imageSrc: 'image/Art_Ddois07.jpg',
+            title: { pt: 'Nkyinkyim', en: 'Nkyinkyim' },
+            year: '2025',
+            dimensions: '22 x 30 x 19 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 7 por DDois', en: 'Nkyinkyim by DDois' }
+        },
+        {
+            id: 'ddois8',
+            imageId: 'ddois8',
+            imageSrc: 'image/Art_Ddois08.jpg',
+            title: { pt: 'Ddois', en: 'Ddois' },
+            year: '2025',
+            dimensions: '47 x 44,5 x 19,5 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 8 por DDois', en: 'Ddois by DDois' }
+        },
+        {
+            id: 'ddois9',
+            imageId: 'ddois9',
+            imageSrc: 'image/Art_Ddois09.jpg',
+            title: { pt: 'Ntesiemate Masie', en: 'Ntesiemate Masie' },
+            year: '2025',
+            dimensions: '22 x 30 x 19 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 9 por DDois', en: 'Ntesiemate Masie by DDois' }
+        },
+        {
+            id: 'ddois10',
+            imageId: 'ddois10',
+            imageSrc: 'image/Art_Ddois10.jpg',
+            title: { pt: 'Asase Ye Duru', en: 'Asase Ye Duru' },
+            year: '2025',
+            dimensions: '26,5 x 56 x 19,5 cm',
+            technique: {
+                pt: 'Pintura sobre banco feito com Madeira de Reuso',
+                en: 'Painting on a bench made from reclaimed wood'
+            },
+            altText: { pt: 'Título da Obra 10 por DDois', en: 'Asase Ye Duru by DDois' }
+        }
+    ],
+    'Otica Otica': [
+        {
+            id: 'otica1',
+            imageId: 'otica1',
+            imageSrc: 'image/Art_otica01.jpg',
+            title: { pt: 'Sem título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '60 x 60 x 28 cm',
+            technique: {
+                pt: 'Colagem e tinta acrílica sobre MDF',
+                en: 'Collage and acrylic paint on MDF'
+            },
+            altText: { pt: 'Sem título por André Santiago (Otica Otica)', en: 'Untitled by André Santiago (Otica Otica)' }
+        },
+        {
+            id: 'otica2',
+            imageId: 'otica2',
+            imageSrc: 'image/Art_otica02.jpg',
+            title: { pt: 'Sem título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '61 x 41 x 5 cm',
+            technique: {
+                pt: 'Colagem e tinta acrílica sobre MDF',
+                en: 'Collage and acrylic paint on MDF'
+            },
+            altText: { pt: 'Sem título por André Santiago (Otica Otica)', en: 'Untitled by André Santiago (Otica Otica)' }
+        },
+        {
+            id: 'otica3',
+            imageId: 'otica3',
+            imageSrc: 'image/Art_otica03.jpg',
+            title: { pt: 'Sem título', en: 'Untitled' },
+            year: '2025',
+            dimensions: '34 x 61 cm',
+            technique: {
+                pt: 'Colagem e tinta acrílica sobre MDF',
+                en: 'Collage and acrylic paint on MDF'
+            },
+            altText: { pt: 'Sem título por André Santiago (Otica Otica)', en: 'Untitled by André Santiago (Otica Otica)' }
+        }
+    ],
+    'Tom Wray': [
+        {
+            id: 'tom1',
+            imageId: 'tom1',
+            imageSrc: 'image/Art_Tom01.jpg',
+            title: { pt: 'As gavetas se abriram, dançaram e escreveram', en: 'The drawers opened, danced, and wrote' },
+            year: '2025',
+            dimensions: { pt: 'Tamanho variável', en: 'variable size' },
+            technique: {
+                pt: 'Spray e goma laca sobre madeira',
+                en: 'Spray and gum lacquer on wood'
+            },
+            altText: { pt: 'As gavetas se abriram, dançaram e escreveram por Tom Wray', en: 'The drawers opened, danced, and wrote by Tom Wray' },
+            note: { pt: '* A obra pode ser dividida em até 3 partes mediante interesse', en: '* The work can be divided into up to 3 parts depending on interest' }
+        }
+    ]
+};
+
+// Helper function to escape quotes in strings for JavaScript in onclick attributes
+function escapeForJS(str) {
+    if (!str) return '';
+    return str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, '\\n').replace(/\r/g, '\\r');
+}
+
+// Function to render artwork cards based on current language
+function renderArtworks(lang) {
+    const priceText = lang === 'pt' ? 'Preços sob consulta' : 'Price upon request';
+
+    // Iterate through each artist
+    Object.keys(artworksData).forEach(artistName => {
+        const artworks = artworksData[artistName];
+
+        // Find the artist section by matching the artist name
+        const allArtistSections = document.querySelectorAll('.artist-section');
+        let targetSection = null;
+
+        allArtistSections.forEach(section => {
+            const titleElement = section.querySelector('.artist-section-title');
+            if (titleElement && titleElement.textContent.trim() === artistName) {
+                targetSection = section;
+            }
+        });
+
+        if (!targetSection) return;
+
+        const gridContainer = targetSection.querySelector('.artist-artwork-grid');
+        if (!gridContainer) return;
+
+        // Clear existing artworks
+        gridContainer.innerHTML = '';
+
+        // Render each artwork
+        artworks.forEach(artwork => {
+            const title = artwork.title[lang];
+            const technique = artwork.technique[lang];
+            const altText = artwork.altText[lang];
+            const dimensions = typeof artwork.dimensions === 'object' ? artwork.dimensions[lang] : artwork.dimensions;
+
+            // For lightbox, combine technique and dimensions like the original HTML
+            const techniqueWithDimensions = dimensions ? `${technique}, ${dimensions}` : technique;
+
+            // Escape quotes for onclick attribute (JavaScript context)
+            const escapedTitle = escapeForJS(title);
+            const escapedTechniqueWithDims = escapeForJS(techniqueWithDimensions);
+            const escapedArtistName = escapeForJS(artistName);
+
+            // For alt attribute, escape HTML special chars
+            const escapedAltText = altText.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            const artworkHTML = `
+                <div class="artwork-item" onclick="openLightbox('${artwork.imageId}', '${escapedTitle}', '${escapedArtistName}', '${escapedTechniqueWithDims}', '${artwork.year}')">
+                    <div class="artwork-image" id="${artwork.imageId}">
+                        <img src="${artwork.imageSrc}" alt="${escapedAltText}" loading="lazy">
+                    </div>
+                    <div class="artwork-details">
+                        <h4 class="artwork-title"><em>${title}</em>, ${artwork.year}</h4>
+                        <p class="artwork-info">${dimensions ? dimensions + '<br>' : ''}${technique}<br>• ${priceText}${artwork.note ? '<br><small><em>' + artwork.note[lang] + '</em></small>' : ''}</p>
+                    </div>
+                </div>
+            `;
+
+            gridContainer.insertAdjacentHTML('beforeend', artworkHTML);
+        });
+    });
 }
 
 // Language Translation System
@@ -515,6 +1073,9 @@ function switchLanguage(lang) {
             element.setAttribute('placeholder', translations[lang][key]);
         }
     });
+
+    // Render artworks in the selected language
+    renderArtworks(lang);
 
     // Save language preference
     localStorage.setItem('preferred-language', lang);
