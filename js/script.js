@@ -235,9 +235,6 @@ function openLightbox(imageId, title, artist, technique, year) {
 
     lightboxTitle.textContent = title;
     lightboxArtist.textContent = currentLanguage === 'pt' ? `por ${artist}` : `by ${artist}`;
-    lightboxDetails.textContent = currentLanguage === 'pt' ?
-        `${technique} • Preços sob consulta` :
-        `${technique} • Price upon request`;
 
     // Store current artwork data for sharing
     currentArtworkData = { title, artist, technique, year };
@@ -338,8 +335,8 @@ const artworksData = {
             year: '2025',
             dimensions: '33 cm (diâmetro)',
             technique: {
-                pt: 'Escultura de Papietagem',
-                en: 'papier-mâché sculpture'
+                pt: 'Colagem sobre escultura de papietagem',
+                en: 'Collage on papier-mâché sculpture,'
             },
             altText: { pt: 'Sem Título por Langa', en: 'Untitled by Langa' }
         },
@@ -351,8 +348,8 @@ const artworksData = {
             year: '2025',
             dimensions: '51 cm (diâmetro)',
             technique: {
-                pt: 'Escultura de Papietagem',
-                en: 'papier-mâché sculpture'
+                pt: 'Colagem sobre escultura de papietagem',
+                en: 'Collage on papier-mâché sculpture,'
             },
             altText: { pt: 'Sem Título por Langa', en: 'Untitled by Langa' }
         }
@@ -367,7 +364,7 @@ const artworksData = {
             dimensions: '160 x 300 cm',
             technique: {
                 pt: 'Tinta acrílica, spray e retalhos de tecido sobre tela',
-                en: 'Acrylic paint and spray paint plus fabric scraps on canvas'
+                en: 'Acrylic paint, spray paint and fabric scraps on canvas'
             },
             altText: { pt: 'Fast Fashion por Iskor', en: 'Fast Fashion by Iskor' }
         }
@@ -381,8 +378,8 @@ const artworksData = {
             year: '2021',
             dimensions: '1,90 x 0,14 m (cada peça) total 8 peças',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Assemblagem de plásticos descartados',
+                en: 'Assemblage with discarded plastics'
             },
             altText: { pt: 'Cipós Urbanos por Milly Pannunzio', en: 'Urban Vines by Milly Pannunzio' },
             note: { pt: '*Obra pode ser dividida em até 8 partes mediante interesse', en: '* The work can be divided into up to 8 parts depending on interest' }
@@ -397,8 +394,8 @@ const artworksData = {
             year: '2025',
             dimensions: '58 x 36,5 x 3,8 cm',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Assemblagem com materiais de descarte em caixa de madeira de reuso e tampa de acrílico',
+                en: 'Assemblage with discarded materials in a reused wooden box with an acrylic lid'
             },
             altText: { pt: 'Forever I por Rukin563', en: 'Forever I by Rukin563' }
         },
@@ -410,8 +407,8 @@ const artworksData = {
             year: '2025',
             dimensions: '58 x 36,5 x 3,8 cm',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Assemblagem com materiais de descarte em caixa de madeira de reuso e tampa de acrílico',
+                en: 'Assemblage with discarded materials in a reused wooden box with an acrylic lid'
             },
             altText: { pt: 'Forever II por Rukin563', en: 'Forever II by Rukin563' }
         },
@@ -423,8 +420,8 @@ const artworksData = {
             year: '2025',
             dimensions: '58 x 36,5 x 3,8 cm',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Assemblagem com materiais de descarte em caixa de madeira de reuso e tampa de acrílico',
+                en: 'Assemblage with discarded materials in a reused wooden box with an acrylic lid'
             },
             altText: { pt: 'Forever III por Rukin563', en: 'Forever III by Rukin563' }
         },
@@ -436,8 +433,8 @@ const artworksData = {
             year: '2025',
             dimensions: '45 x 35 x 3,9 cm',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Assemblagem com materiais de descarte em caixa de acrílico cristal',
+                en: 'Assemblage with discarded materials in an acylic box'
             },
             altText: { pt: 'Time Capsule por Rukin563', en: 'Time Capsule by Rukin563' }
         },
@@ -445,95 +442,30 @@ const artworksData = {
             id: 'rukin5',
             imageId: 'rukin5',
             imageSrc: 'image/Art_Rukin05.jpg',
-            title: { pt: 'Máscara do Herói', en: 'Hero Mask' },
+            title: { pt: 'Landromat art toy', en: 'Landromat art toy' },
             year: '2025',
             dimensions: '',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Plástico',
+                en: 'Plastic'
             },
-            altText: { pt: 'Máscara Herói por Rukin563', en: 'Hero Mask by Rukin563' }
+            altText: { pt: 'Landromat art toy por Rukin563', en: 'Landromat art toy by Rukin563' }
         },
         {
             id: 'rukin6',
             imageId: 'rukin6',
             imageSrc: 'image/Art_Rukin06.jpg',
-            title: { pt: 'Máscara Vide Bula', en: 'Package Insert Mask' },
+            title: { pt: 'Tin robot', en: 'Tin robot' },
             year: '2025',
             dimensions: '',
             technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
+                pt: 'Metal, plástico, imã, concreto',
+                en: 'Metal, plastic, magnet and concrete'
             },
-            altText: { pt: 'Máscara Vide Bula por Rukin563', en: 'Package Insert Mask by Rukin563' }
-        },
-        {
-            id: 'rukin7',
-            imageId: 'rukin7',
-            imageSrc: 'image/Art_Rukin07.jpg',
-            title: { pt: 'New Wave', en: 'New Wave' },
-            year: '2025',
-            dimensions: '',
-            technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
-            },
-            altText: { pt: 'New Wave por Rukin563', en: 'New Wave by Rukin563' }
-        },
-        {
-            id: 'rukin8',
-            imageId: 'rukin8',
-            imageSrc: 'image/Art_Rukin08.jpg',
-            title: { pt: 'Sem Título', en: 'Untitled' },
-            year: '2025',
-            dimensions: '',
-            technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
-            },
-            altText: { pt: 'Sem Título por Rukin563', en: 'Untitled by Rukin563' }
-        },
-        {
-            id: 'rukin9',
-            imageId: 'rukin9',
-            imageSrc: 'image/Art_Rukin09.jpg',
-            title: { pt: 'Linhas e Espelho', en: 'Lines and Mirror' },
-            year: '2025',
-            dimensions: '',
-            technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
-            },
-            altText: { pt: 'Linhas e Espelho por Rukin563', en: 'Lines and Mirror by Rukin563' }
-        },
-        {
-            id: 'rukin10',
-            imageId: 'rukin10',
-            imageSrc: 'image/Art_Rukin10.jpg',
-            title: { pt: 'O Aroma Colorido dos Perfumes', en: 'The Colorful Aroma of the Perfumes' },
-            year: '2025',
-            dimensions: '',
-            technique: {
-                pt: 'Assemblagem com Materiais de Descarte',
-                en: 'Assemblage with Discarded Materials'
-            },
-            altText: { pt: 'O Aroma Colorido dos Perfumes por Rukin563', en: 'The Colorful Aroma of the Perfumes by Rukin563' }
+            altText: { pt: 'Tin robot por Rukin563', en: 'Tin robot by Rukin563' }
         }
     ],
     'Luis Guimarães': [
-        {
-            id: 'luis1',
-            imageId: 'luis1',
-            imageSrc: 'image/Art_luis01.jpg',
-            title: { pt: 'Sem Título', en: 'Untitled' },
-            year: '2025',
-            dimensions: '46 x 28,5 x 12 cm',
-            technique: {
-                pt: 'Assemblagem',
-                en: 'Assemblage'
-            },
-            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
-        },
         {
             id: 'luis2',
             imageId: 'luis2',
@@ -585,32 +517,6 @@ const artworksData = {
                 en: 'Assemblage'
             },
             altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
-        },
-        {
-            id: 'luis7',
-            imageId: 'luis7',
-            imageSrc: 'image/Art_luis07.jpg',
-            title: { pt: 'Sem Título', en: 'Untitled' },
-            year: '2025',
-            dimensions: '24 x 25 x 4 cm',
-            technique: {
-                pt: 'Assemblagem',
-                en: 'Assemblage'
-            },
-            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
-        },
-        {
-            id: 'luis8',
-            imageId: 'luis8',
-            imageSrc: 'image/Art_luis08.jpg',
-            title: { pt: 'Sem Título', en: 'Untitled' },
-            year: '2025',
-            dimensions: '59 (diâmetro) x 6,5 cm',
-            technique: {
-                pt: 'Assemblagem',
-                en: 'Assemblage'
-            },
-            altText: { pt: 'Sem Título por Luis Guimarães', en: 'Untitled by Luis Guimarães' }
         }
     ],
     'DDois': [
@@ -626,32 +532,6 @@ const artworksData = {
                 en: 'Styrofoam and Spray Painting'
             },
             altText: { pt: 'Título da Obra 1 por DDois', en: 'Untitled by DDois' }
-        },
-        {
-            id: 'ddois2',
-            imageId: 'ddois2',
-            imageSrc: 'image/Art_Ddois02.jpg',
-            title: { pt: 'Ananse Ntotan', en: 'Ananse Ntotan' },
-            year: '2025',
-            dimensions: '47 x 35,5 x 19,5 cm',
-            technique: {
-                pt: 'Pintura sobre banco feito com Madeira de Reuso',
-                en: 'Painting on a bench made from reclaimed wood'
-            },
-            altText: { pt: 'Título da Obra 2 por DDois', en: 'Ananse Ntotan by DDois' }
-        },
-        {
-            id: 'ddois3',
-            imageId: 'ddois3',
-            imageSrc: 'image/Art_Ddois03.jpg',
-            title: { pt: 'Dwantire', en: 'Dwantire' },
-            year: '2025',
-            dimensions: '22 x 47 x 20 cm',
-            technique: {
-                pt: 'Pintura sobre banco feito com Madeira de Reuso',
-                en: 'Painting on a bench made from reclaimed wood'
-            },
-            altText: { pt: 'Título da Obra 3 por DDois', en: 'Dwantire by DDois' }
         },
         {
             id: 'ddois4',
@@ -680,45 +560,6 @@ const artworksData = {
             altText: { pt: 'Título da Obra 5 por DDois', en: 'Aya by DDois' }
         },
         {
-            id: 'ddois6',
-            imageId: 'ddois6',
-            imageSrc: 'image/Art_Ddois06.jpg',
-            title: { pt: 'Sankofa', en: 'Sankofa' },
-            year: '2025',
-            dimensions: '37 x 36 x 19,5 cm',
-            technique: {
-                pt: 'Pintura sobre banco feito com Madeira de Reuso',
-                en: 'Painting on a bench made from reclaimed wood'
-            },
-            altText: { pt: 'Título da Obra 6 por DDois', en: 'Sankofa by DDois' }
-        },
-        {
-            id: 'ddois7',
-            imageId: 'ddois7',
-            imageSrc: 'image/Art_Ddois07.jpg',
-            title: { pt: 'Nkyinkyim', en: 'Nkyinkyim' },
-            year: '2025',
-            dimensions: '22 x 30 x 19 cm',
-            technique: {
-                pt: 'Pintura sobre banco feito com Madeira de Reuso',
-                en: 'Painting on a bench made from reclaimed wood'
-            },
-            altText: { pt: 'Título da Obra 7 por DDois', en: 'Nkyinkyim by DDois' }
-        },
-        {
-            id: 'ddois8',
-            imageId: 'ddois8',
-            imageSrc: 'image/Art_Ddois08.jpg',
-            title: { pt: 'Ddois', en: 'Ddois' },
-            year: '2025',
-            dimensions: '47 x 44,5 x 19,5 cm',
-            technique: {
-                pt: 'Pintura sobre banco feito com Madeira de Reuso',
-                en: 'Painting on a bench made from reclaimed wood'
-            },
-            altText: { pt: 'Título da Obra 8 por DDois', en: 'Ddois by DDois' }
-        },
-        {
             id: 'ddois9',
             imageId: 'ddois9',
             imageSrc: 'image/Art_Ddois09.jpg',
@@ -730,19 +571,6 @@ const artworksData = {
                 en: 'Painting on a bench made from reclaimed wood'
             },
             altText: { pt: 'Título da Obra 9 por DDois', en: 'Ntesiemate Masie by DDois' }
-        },
-        {
-            id: 'ddois10',
-            imageId: 'ddois10',
-            imageSrc: 'image/Art_Ddois10.jpg',
-            title: { pt: 'Asase Ye Duru', en: 'Asase Ye Duru' },
-            year: '2025',
-            dimensions: '26,5 x 56 x 19,5 cm',
-            technique: {
-                pt: 'Pintura sobre banco feito com Madeira de Reuso',
-                en: 'Painting on a bench made from reclaimed wood'
-            },
-            altText: { pt: 'Título da Obra 10 por DDois', en: 'Asase Ye Duru by DDois' }
         }
     ],
     'Otica Otica': [
