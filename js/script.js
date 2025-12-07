@@ -640,8 +640,6 @@ function escapeForJS(str) {
 
 // Function to render artwork cards based on current language
 function renderArtworks(lang) {
-    const priceText = lang === 'pt' ? 'Preços sob consulta' : 'Price upon request';
-
     // Iterate through each artist
     Object.keys(artworksData).forEach(artistName => {
         const artworks = artworksData[artistName];
@@ -690,7 +688,7 @@ function renderArtworks(lang) {
                     </div>
                     <div class="artwork-details">
                         <h4 class="artwork-title"><em>${title}</em>, ${artwork.year}</h4>
-                        <p class="artwork-info">${dimensions ? dimensions + '<br>' : ''}${technique}<br>• ${priceText}${artwork.note ? '<br><small><em>' + artwork.note[lang] + '</em></small>' : ''}</p>
+                        <p class="artwork-info">${dimensions ? dimensions + '<br>' : ''}${technique}${artwork.note ? '<br><small><em>' + artwork.note[lang] + '</em></small>' : ''}</p>
                     </div>
                 </div>
             `;
