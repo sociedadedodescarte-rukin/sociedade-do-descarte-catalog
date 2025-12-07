@@ -336,7 +336,7 @@ const artworksData = {
             dimensions: '33 cm (diâmetro)',
             technique: {
                 pt: 'Colagem sobre escultura de papietagem',
-                en: 'Collage on papier-mâché sculpture,'
+                en: 'Collage on papier-mâché sculpture'
             },
             altText: { pt: 'Sem Título por Langa', en: 'Untitled by Langa' }
         },
@@ -349,7 +349,7 @@ const artworksData = {
             dimensions: '51 cm (diâmetro)',
             technique: {
                 pt: 'Colagem sobre escultura de papietagem',
-                en: 'Collage on papier-mâché sculpture,'
+                en: 'Collage on papier-mâché sculpture'
             },
             altText: { pt: 'Sem Título por Langa', en: 'Untitled by Langa' }
         }
@@ -434,7 +434,7 @@ const artworksData = {
             dimensions: '45 x 35 x 3,9 cm',
             technique: {
                 pt: 'Assemblagem com materiais de descarte em caixa de acrílico cristal',
-                en: 'Assemblage with discarded materials in an acylic box'
+                en: 'Assemblage with discarded materials in an acrylic box'
             },
             altText: { pt: 'Time Capsule por Rukin563', en: 'Time Capsule by Rukin563' }
         },
@@ -446,7 +446,7 @@ const artworksData = {
             year: '2025',
             dimensions: '',
             technique: {
-                pt: 'Plástico',
+                pt: 'plástico',
                 en: 'Plastic'
             },
             altText: { pt: 'Landromat art toy por Rukin563', en: 'Landromat art toy by Rukin563' }
@@ -511,7 +511,7 @@ const artworksData = {
             imageSrc: 'image/Art_luis06.jpg',
             title: { pt: 'Sem Título', en: 'Untitled' },
             year: '2025',
-            dimensions: '51 x 48,5 x 19',
+            dimensions: '51 x 48,5 x 19 cm',
             technique: {
                 pt: 'Assemblagem',
                 en: 'Assemblage'
@@ -717,7 +717,7 @@ const translations = {
         'cover-subtitle': 'Venha descobrir como materiais descartados se transformam em multiversos artísticos',
         'cover-details1': '8 Artistas • Obras Contemporâneas • Técnicas Mistas',
         'cover-details2': 'Passagem Literária • São Paulo',
-        'cover-details3': 'Setembro à Dezembro • 2025',
+        'cover-details3': 'de Setembro até Dezembro • 2025',
 
         // Introduction
         'intro-title': 'Sobre a Exposição',
